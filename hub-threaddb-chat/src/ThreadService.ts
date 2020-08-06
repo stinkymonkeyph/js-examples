@@ -1,4 +1,4 @@
-import { DBInfo } from "@textile/threads";
+// import { DBInfo } from "@textile/threads";
 import {Libp2pCryptoIdentity} from '@textile/threads-core';
 import { Collection, Database, KeyInfo, JSONSchema, ThreadID } from "@textile/hub";
 import { ChatInstance } from './types';
@@ -26,9 +26,9 @@ export class ThreadService {
     this.identity = await getIdentity()
 
     /* You'll need to include this information in your app */
-    const key: KeyInfo = {key: process.env.REACT_APP_API_KEY || ''}
+    const key: KeyInfo = {key: 'bf5bmop3o7kzbwpt6s5w3jrhkau' }
     // We could also consider prefixing the db by identity (or some # of chars from the public key)
-    this.db = await Database.withKeyInfo(key, dbName, undefined, process.env.REACT_APP_API) // final variable can be undefined
+    this.db = await Database.withKeyInfo(key, dbName, undefined, undefined) // final variable can be undefined
     return this;
   } 
 
