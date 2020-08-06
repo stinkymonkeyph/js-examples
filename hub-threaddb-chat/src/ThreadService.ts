@@ -81,7 +81,7 @@ export class ThreadService {
    * Uses the result of getDBInfo to join a remote room
    * @param invite the parsed value returned from getDBInfo
    */
-  public joinExternalRoom = async (invite: DBInfo) => {
+  public joinExternalRoom = async (invite: any) => {
     if (!this.identity) {
       throw new Error('Identity not found')
     }
